@@ -3,8 +3,15 @@ AS
 
 FUNCTION prueba RETURN PLS_INTEGER
 IS
+	v_hola PLS_INTEGER;
+	v_err  PLS_INTEGER;
 BEGIN
+	v_err := 0;
+	v_hola := 3/v_err;
 	RETURN 0;
+EXCEPTION
+	WHEN OTHERS THEN
+		RETURN -1;
 END;
 
 END;
